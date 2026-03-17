@@ -12,988 +12,608 @@ transition: slide-left
 
 Key Considerations & Industry Practices
 
-<div class="mt-8 text-lg opacity-70">
-Exposure to Emerging Technologies, Practical Applications & Career Insights
+<div class="mt-12 text-lg opacity-60">
+A seminar on building apps people actually love using
 </div>
 
 <!--
-Welcome everyone! Today we'll explore the world of mobile application development -
-from foundational concepts to industry best practices and career opportunities.
-This talk is designed for ~1 hour including an interactive hands-on section.
+Welcome! Today's talk is designed to be approachable — we'll use analogies
+and visuals to make mobile development concepts click.
 -->
 
 ---
 
-# Agenda
+# What We'll Cover
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-12 mt-8">
 
 <div>
 
-### Part 1: The Landscape
+### The Journey
 
-<div class="mt-2 space-y-2 text-sm">
-
-- Mobile development in 2026
-- Native vs Cross-Platform
-- iOS, Android & Flutter ecosystems
-
-</div>
-
-### Part 2: Key Considerations
-
-<div class="mt-2 space-y-2 text-sm">
-
-- Architecture patterns (MVVM, MVP, BLoC)
-- UI/UX design principles
-- State management & networking
-- Testing & security
-
-</div>
+1. Why mobile matters
+2. Picking your tools
+3. Building it right
+4. Shipping it safely
 
 </div>
 
 <div>
 
-### Part 3: Industry Practices
+### The Outcome
 
-<div class="mt-2 space-y-2 text-sm">
-
-- CI/CD for mobile
-- App Store deployment
-- Monitoring & performance
-
-</div>
-
-### Part 4: Hands-On & Careers
-
-<div class="mt-2 space-y-2 text-sm">
-
-- Interactive cookbook walkthrough
-- Career roadmap & insights
-- Q&A
-
-</div>
+- See the big picture of mobile dev
+- Understand key decisions teams face
+- Get hands-on with a mini project
+- Know where to go from here
 
 </div>
 
 </div>
 
 <!--
-Here's our roadmap for today. We'll move from high-level landscape into deep
-technical considerations, then industry practices, and close with a hands-on
-cookbook and career discussion. Feel free to ask questions anytime.
+Think of this as a roadmap. We'll go from "why" to "how" to "what's next."
 -->
 
 ---
 
-# Learning Goals
+# Mobile is Everywhere
 
-<div class="grid grid-cols-3 gap-6 mt-8">
+<div class="mt-6 text-center">
 
-<div v-click class="icon-card text-center">
-
-### Emerging Tech
-
-<div class="text-4xl mt-4 mb-4">🔬</div>
-
-<p class="text-sm opacity-80">Understand the current mobile technology landscape and where it's heading</p>
+### Think about your last hour...
 
 </div>
 
-<div v-click class="icon-card text-center">
+<div class="grid grid-cols-4 gap-4 mt-8 text-center">
 
-### Practical Apps
+<div v-click class="icon-card">
+<div class="text-4xl mb-2">⏰</div>
+Alarm clock
+</div>
 
-<div class="text-4xl mt-4 mb-4">🛠️</div>
+<div v-click class="icon-card">
+<div class="text-4xl mb-2">💬</div>
+Messaging
+</div>
 
-<p class="text-sm opacity-80">Learn key considerations & patterns for building production mobile apps</p>
+<div v-click class="icon-card">
+<div class="text-4xl mb-2">🗺️</div>
+Navigation
+</div>
+
+<div v-click class="icon-card">
+<div class="text-4xl mb-2">💳</div>
+Payment
+</div>
 
 </div>
 
-<div v-click class="icon-card text-center">
+<div v-click class="highlight-box mt-8 text-center">
 
-### Career Insights
-
-<div class="text-4xl mt-4 mb-4">🚀</div>
-
-<p class="text-sm opacity-80">Discover career paths, skills roadmap, and growth opportunities</p>
-
-</div>
+**6.9 billion** smartphone users &bull; **4+ hours** daily screen time &bull; **60%** of web traffic is mobile
 
 </div>
 
 <!--
-Three pillars for today: exposure to what's new, practical hands-on knowledge,
-and insights into how to build a career in mobile development.
+You probably used 5+ apps before arriving here today. That's the reach of mobile development.
 -->
 
 ---
 
-# The Mobile Landscape in 2026
+# Two Worlds, One Goal
 
-<div class="grid grid-cols-2 gap-8 mt-4">
-
-<div v-click>
-
-## The Numbers
-
-- **6.9 billion** smartphone users worldwide
-- **$935 billion** projected app revenue
-- **5.7 million** apps across major stores
-- **4+ hours** average daily mobile usage
-- Mobile accounts for **60%+** of web traffic
-
-</div>
-
-<div v-click>
-
-## What's Trending
-
-- **AI/ML Integration** – on-device inference, smart assistants
-- **AR/VR Experiences** – spatial computing, Apple Vision Pro
-- **Super Apps** – multi-function platforms
-- **5G-Powered Features** – real-time collaboration, streaming
-- **Privacy-First Design** – user data protection regulations
-
-</div>
-
-</div>
-
-<div v-click class="highlight-box mt-4 text-center text-sm">
-  Mobile is not just a platform — it's the <strong>primary interface</strong> between people and technology.
-</div>
-
-<!--
-The mobile market is massive and continues to grow. These trends shape what
-developers need to learn and what companies are investing in.
--->
-
----
-
-# Two Dominant Ecosystems
+<div class="mt-4 text-center text-sm opacity-70">Mobile development is like car manufacturing — two major factories, same purpose</div>
 
 <div class="grid grid-cols-2 gap-8 mt-6">
 
-<div v-click>
+<div v-click class="icon-card text-center">
 
-<div class="icon-card">
+<div class="text-5xl mb-4">🍎</div>
 
 ### Apple / iOS
 
-- **Language:** Swift (modern, type-safe)
-- **UI Frameworks:** SwiftUI, UIKit
-- **IDE:** Xcode
-- **Distribution:** App Store
-- **Market:** Higher revenue per user, premium segment
-- **Key APIs:** Core ML, ARKit, HealthKit, StoreKit
+Swift language &bull; SwiftUI framework
+
+Xcode IDE &bull; App Store
+
+*Premium feel, higher revenue per user*
 
 </div>
 
-</div>
+<div v-click class="icon-card text-center">
 
-<div v-click>
-
-<div class="icon-card">
+<div class="text-5xl mb-4">🤖</div>
 
 ### Google / Android
 
-- **Language:** Kotlin (concise, interoperable)
-- **UI Frameworks:** Jetpack Compose, XML Views
-- **IDE:** Android Studio
-- **Distribution:** Google Play, sideloading
-- **Market:** Larger user base, global reach
-- **Key APIs:** ML Kit, ARCore, CameraX, WorkManager
+Kotlin language &bull; Jetpack Compose
 
-</div>
+Android Studio &bull; Google Play
 
-</div>
-
-</div>
-
-<!--
-Both platforms have mature ecosystems. Swift and Kotlin are modern languages that
-replaced Objective-C and Java respectively. Both now have declarative UI frameworks.
--->
-
----
-
-# Native iOS Development
-
-<div class="grid grid-cols-2 gap-6 mt-2">
-
-<div>
-
-### Swift & SwiftUI
-
-```swift
-struct ChoreListView: View {
-    @StateObject var viewModel = ChoreViewModel()
-
-    var body: some View {
-        NavigationStack {
-            List(viewModel.chores) { chore in
-                ChoreRow(chore: chore)
-            }
-            .navigationTitle("My Chores")
-            .task {
-                await viewModel.loadChores()
-            }
-        }
-    }
-}
-```
-
-<span class="badge badge-ios">SwiftUI</span>
-<span class="badge badge-ios">Async/Await</span>
-<span class="badge badge-ios">MVVM</span>
-
-</div>
-
-<div v-click>
-
-### Key Patterns We've Used
-
-- **MVVM + Combine** for reactive data flow
-- **Structured Concurrency** (async/await)
-- **Dependency Injection** for testability
-- **XCTest** for unit & UI testing
-
-<div class="accent-box mt-4 text-sm">
-
-**Real Project:** We built a "Tidy" app using MVVM + Combine to manage household chores — demonstrating clean architecture vs a simpler "Unkempt" approach.
-
-</div>
+*Wider reach, more device variety*
 
 </div>
 
 </div>
 
 <!--
-This code is adapted from our iosdemo training project. Notice how SwiftUI's
-declarative syntax makes UI code readable. The Tidy vs Unkempt comparison
-demonstrated why architecture matters even in small apps.
+Like Toyota and BMW — different approaches, both make great cars.
+Each has its own language, tools, and marketplace.
 -->
 
 ---
 
-# Native Android Development
+# But Wait... Do You Need Two Teams?
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="mt-2 text-center text-sm opacity-70">What if you could write once and run on both?</div>
 
-<div>
+<div class="diagram-container mt-6">
 
-### Kotlin & Jetpack Compose
+```mermaid {scale: 0.7}
+graph LR
+    A["One Codebase 📝"] --> B["Flutter / React Native"]
+    B --> C["iOS App 🍎"]
+    B --> D["Android App 🤖"]
+    B --> E["Web App 🌐"]
 
-```kotlin
-@Composable
-fun TransferScreen(
-    viewModel: TransferViewModel = viewModel()
-) {
-    val state by viewModel.uiState.collectAsState()
-
-    Column(modifier = Modifier.padding(16.dp)) {
-        Text("Bank Transfer",
-            style = MaterialTheme.typography.headlineMedium)
-
-        AmountField(value = state.amount,
-            onValueChange = viewModel::updateAmount)
-
-        Button(onClick = { viewModel.submit() }) {
-            Text("Transfer")
-        }
-    }
-}
-```
-
-<span class="badge badge-android">Compose</span>
-<span class="badge badge-android">StateFlow</span>
-<span class="badge badge-android">MVVM</span>
-
-</div>
-
-<div v-click>
-
-### Key Patterns We've Used
-
-- **MVP → MVVM** migration patterns
-- **Activities & Fragments** lifecycle management
-- **Retrofit** for network requests
-- **Data Binding** for reactive views
-
-<div class="accent-box mt-4 text-sm">
-
-**Real Project:** Our Android cadet training covered a banking app with Activities, Fragments, MVP pattern, and Retrofit for API calls — all fundamental building blocks.
-
-</div>
-
-</div>
-
-</div>
-
-<!--
-This is modeled after our android-cadet-training project. Kotlin's conciseness
-with Jetpack Compose is analogous to Swift with SwiftUI - both are declarative.
-The training covered the full lifecycle from Activities to network calls.
--->
-
----
-
-# Cross-Platform with Flutter
-
-<div class="grid grid-cols-2 gap-6 mt-2">
-
-<div>
-
-### Dart & Flutter
-
-```dart
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => getIt<LoginBloc>(),
-      child: BlocBuilder<LoginBloc, LoginState>(
-        builder: (context, state) {
-          return Scaffold(
-            body: Column(
-              children: [
-                EmailField(error: state.emailError),
-                PasswordField(error: state.passError),
-                LoginButton(isLoading: state.isLoading),
-              ],
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-```
-
-<span class="badge badge-flutter">Flutter</span>
-<span class="badge badge-flutter">BLoC</span>
-<span class="badge badge-flutter">GetIt DI</span>
-
-</div>
-
-<div v-click>
-
-### Why Flutter?
-
-- **Single codebase** for iOS, Android, Web, Desktop
-- **Hot Reload** for rapid development
-- **Widget-based** composable UI system
-- **Growing ecosystem** and community
-
-<div class="accent-box mt-4 text-sm">
-
-**Real Project:** Our CadetBank app uses Flutter + BLoC pattern with login, registration, and collection screens — demonstrating clean state management with GetIt for dependency injection.
-
-</div>
-
-</div>
-
-</div>
-
-<!--
-The CadetBank project from our training is a great example. BLoC separates business
-logic from UI, GetIt handles dependency injection, and Freezed generates immutable
-state classes. One codebase, two platforms.
--->
-
----
-
-# Native vs Cross-Platform: The Decision Matrix
-
-<div class="mt-4">
-
-| Factor | Native (iOS/Android) | Cross-Platform (Flutter/RN) |
-|---|---|---|
-| **Performance** | Best-in-class | Near-native (95%+) |
-| **Platform APIs** | Full access, day-1 support | Plugin-dependent, slight lag |
-| **Dev Speed** | Slower (2 codebases) | Faster (shared codebase) |
-| **Team Size** | Larger (specialized) | Smaller (shared skills) |
-| **UI Fidelity** | Pixel-perfect platform feel | Consistent cross-platform |
-| **Cost** | Higher | Lower |
-| **Maintenance** | Two separate apps | Single codebase |
-
-</div>
-
-<div v-click class="highlight-box mt-4 text-sm">
-
-**Industry Insight:** Many companies use a <strong>hybrid approach</strong> — cross-platform for most features, native modules for performance-critical or platform-specific functionality.
-
-</div>
-
-<!--
-There's no universal "best" choice. The answer depends on your team, budget,
-timeline, and app requirements. Many successful companies use both approaches.
--->
-
----
-
-# Other Cross-Platform Options Worth Knowing
-
-<div class="grid grid-cols-3 gap-4 mt-6">
-
-<div v-click class="icon-card">
-
-### React Native
-
-- JavaScript / TypeScript
-- Large community
-- Meta-backed
-- Bridge to native modules
-- Used by: Instagram, Shopify
-
-</div>
-
-<div v-click class="icon-card">
-
-### Kotlin Multiplatform
-
-- Shared Kotlin business logic
-- Native UI per platform
-- JetBrains-backed
-- Growing adoption
-- Used by: Netflix, VMWare
-
-</div>
-
-<div v-click class="icon-card">
-
-### .NET MAUI
-
-- C# / .NET
-- Microsoft ecosystem
-- Evolved from Xamarin
-- Desktop + Mobile
-- Used by: UPS, NBC Sports
-
-</div>
-
-</div>
-
-<div v-click class="mt-6 text-center text-sm opacity-70">
-
-The cross-platform space is maturing rapidly — all options produce production-quality apps in 2026.
-
-</div>
-
-<!--
-React Native is the most established. KMP is interesting because you share logic
-but keep native UI. MAUI is great for teams already in the .NET ecosystem.
--->
-
----
-layout: section
----
-
-# Part 2: Key Considerations
-
-Architecture, UI/UX, Testing & Security
-
-<!--
-Now let's dive into the technical considerations that separate hobby projects
-from production-grade mobile applications.
--->
-
----
-
-# Architecture Patterns
-
-<div class="grid grid-cols-2 gap-6 mt-2">
-
-<div>
-
-### Why Architecture Matters
-
-<div v-click class="mb-4">
-
-Without architecture:
-- Code becomes tangled ("Big ViewController")
-- Testing is painful or impossible
-- Onboarding new developers takes forever
-- Bugs are hard to trace
-
-</div>
-
-<div v-click>
-
-With architecture:
-- Clear separation of concerns
-- Easy to test each layer
-- Teams can work in parallel
-- Predictable data flow
-
-</div>
-
-</div>
-
-<div>
-
-<div class="diagram-container">
-
-```mermaid {scale: 0.55}
-graph TD
-    A[View / UI Layer] -->|User Actions| B[ViewModel / Presenter]
-    B -->|Updated State| A
-    B -->|Requests| C[Repository / Use Case]
-    C -->|Data| D[Remote API]
-    C -->|Data| E[Local DB]
-
-    style A fill:#6C5CE7,color:#fff
+    style A fill:#A29BFE,color:#fff
     style B fill:#00D2D3,color:#000
-    style C fill:#6C5CE7,color:#fff
+    style C fill:#1B1464,color:#fff
     style D fill:#1B1464,color:#fff
     style E fill:#1B1464,color:#fff
 ```
 
 </div>
 
-<div class="text-center text-sm mt-2 opacity-70">Clean Architecture Layers</div>
-
-</div>
-
-</div>
-
-<!--
-Architecture is the skeleton of your app. We saw this clearly in the Tidy vs
-Unkempt comparison — the "Tidy" app with proper MVVM was much easier to test
-and extend compared to the simpler "Unkempt" approach.
--->
-
----
-
-# Popular Mobile Architecture Patterns
-
-<div class="grid grid-cols-3 gap-4 mt-4">
+<div class="grid grid-cols-3 gap-4 mt-6 text-center text-sm">
 
 <div v-click class="icon-card">
 
-### MVVM
+**Flutter** (Dart)
 
-**Model-View-ViewModel**
-
-- View observes ViewModel state
-- ViewModel transforms Model data
-- Two-way data binding
-- Popular on iOS (SwiftUI) & Android (Compose)
-
-```
-View ↔ ViewModel → Model
-```
+Google-backed, fast growing
 
 </div>
 
 <div v-click class="icon-card">
 
-### MVP
+**React Native** (JS/TS)
 
-**Model-View-Presenter**
-
-- Presenter holds UI logic
-- View is passive (interface)
-- Easier to unit test Presenter
-- Common in legacy Android
-
-```
-View ↔ Presenter → Model
-```
+Meta-backed, huge community
 
 </div>
 
 <div v-click class="icon-card">
 
-### BLoC
+**Kotlin Multiplatform**
 
-**Business Logic Component**
+JetBrains-backed, shared logic
 
-- Events in, States out
-- Stream-based reactive pattern
-- Flutter's recommended pattern
-- Clear unidirectional flow
+</div>
 
+</div>
+
+<!--
+Cross-platform is like a universal power adapter — one plug, works everywhere.
+Not always perfect, but incredibly practical.
+-->
+
+---
+
+# The Big Decision
+
+<div class="mt-4 text-center text-sm opacity-70">It's like choosing between a custom-tailored suit vs a great off-the-rack one</div>
+
+<div class="diagram-container mt-6">
+
+```mermaid {scale: 0.65}
+graph TD
+    A{"What matters most?"} -->|"Max performance<br/>Platform-specific features"| B["Go Native"]
+    A -->|"Faster dev time<br/>Smaller team & budget"| C["Go Cross-Platform"]
+    A -->|"Both!"| D["Hybrid Approach"]
+
+    style A fill:#A29BFE,color:#fff
+    style B fill:#00D2D3,color:#000
+    style C fill:#00D2D3,color:#000
+    style D fill:#1B1464,color:#fff
 ```
-Event → BLoC → State → UI
+
+</div>
+
+<div v-click class="highlight-box mt-4 text-center text-sm">
+
+Most companies in 2026 use a **hybrid approach** — cross-platform for 80% of features, native for the critical 20%.
+
+</div>
+
+<!--
+There's no wrong answer. It depends on your team, budget, and timeline.
+Like choosing a restaurant — fast food isn't bad, fine dining isn't always better.
+-->
+
+---
+layout: section
+---
+
+# Building It Right
+
+The key decisions that separate good apps from great ones
+
+<!--
+Now let's talk about the "how." These are the decisions that matter
+once you've picked your tools.
+-->
+
+---
+
+# Architecture: The Blueprint
+
+<div class="mt-2 text-center text-sm opacity-70">Building an app without architecture is like building a house without blueprints</div>
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div v-click>
+
+### Without a plan...
+
+<div class="icon-card mt-2">
+
+- Everything tangled together
+- One change breaks 5 things
+- Testing? Good luck.
+- New team member? Weeks to onboard.
+
+*This is called a "Big Ball of Mud"*
+
+</div>
+
+</div>
+
+<div v-click>
+
+### With a plan...
+
+<div class="icon-card mt-2">
+
+- Each piece has a clear job
+- Changes are isolated & safe
+- Easy to test each layer
+- Team members work in parallel
+
+*This is called "Clean Architecture"*
+
+</div>
+
+</div>
+
+</div>
+
+<!--
+Think of it like a kitchen. Without organization, ingredients, tools, and
+trash all mixed together. With organization, prep station, cooking station,
+plating station — everyone knows their role.
+-->
+
+---
+
+# The Restaurant Analogy
+
+<div class="mt-2 text-center text-sm opacity-70">Every popular architecture pattern works like a well-run restaurant</div>
+
+<div class="diagram-container mt-4">
+
+```mermaid {scale: 0.65}
+graph LR
+    A["👤 Customer<br/>(User)"] -->|"Orders"| B["🧑‍🍳 Waiter<br/>(ViewModel / Presenter)"]
+    B -->|"Requests"| C["👨‍🍳 Kitchen<br/>(Business Logic)"]
+    C -->|"Gets ingredients"| D["🏪 Pantry<br/>(Database / API)"]
+    D -->|"Supplies"| C
+    C -->|"Prepared dish"| B
+    B -->|"Serves food"| A
+
+    style A fill:#A29BFE,color:#fff
+    style B fill:#00D2D3,color:#000
+    style C fill:#A29BFE,color:#fff
+    style D fill:#1B1464,color:#fff
 ```
 
 </div>
 
-</div>
+<div class="grid grid-cols-3 gap-4 mt-4 text-center text-sm">
 
-<div v-click class="highlight-box mt-4 text-sm">
+<div v-click class="icon-card">
 
-**From our training:** We used <strong>MVVM + Combine</strong> for iOS (Tidy), <strong>MVP</strong> for Android (CadetTraining), and <strong>BLoC</strong> for Flutter (CadetBank) — real examples of each pattern.
+**MVVM** (iOS / Android)
 
-</div>
-
-<!--
-Each pattern has its place. The important thing is consistency within a project.
-Our training projects demonstrate all three in practice.
--->
-
----
-
-# UI/UX Key Considerations
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div>
-
-<div v-click>
-
-### Platform Design Guidelines
-
-- **iOS:** Human Interface Guidelines (HIG)
-- **Android:** Material Design 3
-- Users expect platform-native interactions
-- Respect platform navigation patterns
+Waiter *observes* the kitchen
 
 </div>
 
-<div v-click class="mt-4">
+<div v-click class="icon-card">
 
-### Responsive Design
+**MVP** (Legacy Android)
 
-- Phones, tablets, foldables
-- Dynamic type / font scaling
-- Dark mode support
-- Landscape & portrait orientations
+Waiter *asks* the kitchen directly
 
 </div>
 
-</div>
+<div v-click class="icon-card">
 
-<div>
+**BLoC** (Flutter)
 
-<div v-click>
-
-### Accessibility (a11y)
-
-- VoiceOver / TalkBack support
-- Sufficient color contrast (4.5:1 ratio)
-- Touch targets ≥ 44pt (iOS) / 48dp (Android)
-- Semantic labels for screen readers
-
-</div>
-
-<div v-click>
-
-### Performance UX
-
-- Skeleton screens over spinners
-- Optimistic updates
-- Offline-first with graceful degradation
-- Smooth 60fps animations
-
-</div>
+Order ticket in → Dish out
 
 </div>
 
 </div>
 
 <!--
-Great UX is invisible — users only notice when something is wrong. Following
-platform guidelines means your app feels "at home" on each platform.
-Accessibility is not optional; it's a requirement for many enterprise apps.
+The customer never goes into the kitchen. The waiter never stores inventory.
+Each role is separate. That's the whole point of architecture patterns.
 -->
 
 ---
 
-# State Management
+# State Management: Who Remembers What?
 
-<div class="mt-2">
+<div class="mt-2 text-center text-sm opacity-70">State = the data your app needs to remember right now</div>
 
-### The Core Challenge
+<div class="grid grid-cols-3 gap-6 mt-6">
 
-Every mobile app must decide: **where does state live, how does it change, and who gets notified?**
+<div v-click class="icon-card text-center">
 
-</div>
+<div class="text-4xl mb-2">📋</div>
 
-<div class="grid grid-cols-3 gap-4 mt-4">
+### Local State
 
-<div v-click class="icon-card text-sm">
+"Is this menu open?"
 
-### iOS
-
-- **@State / @Binding** – local view state
-- **@StateObject / @ObservedObject** – shared state
-- **Combine** – reactive streams
-- **@EnvironmentObject** – dependency injection
+*Stays in the screen*
 
 </div>
 
-<div v-click class="icon-card text-sm">
+<div v-click class="icon-card text-center">
 
-### Android
+<div class="text-4xl mb-2">🧠</div>
 
-- **State\<T\>** / **MutableState** – Compose state
-- **StateFlow / SharedFlow** – coroutine streams
-- **ViewModel** – survives config changes
-- **SavedStateHandle** – process death
+### Shared State
+
+"What's in my cart?"
+
+*Lives in a ViewModel / BLoC*
 
 </div>
 
-<div v-click class="icon-card text-sm">
+<div v-click class="icon-card text-center">
 
-### Flutter
+<div class="text-4xl mb-2">🏛️</div>
 
-- **setState** – simple local state
-- **BLoC / Cubit** – event-driven state
-- **Provider / Riverpod** – dependency injection
-- **Freezed** – immutable state classes
+### Global State
+
+"Who is logged in?"
+
+*App-wide, persisted*
 
 </div>
 
 </div>
 
-<div v-click class="highlight-box mt-4 text-sm">
+<div v-click class="highlight-box mt-6 text-center text-sm">
 
-**Rule of thumb:** Local UI state stays in the view. Shared business state lives in a ViewModel/BLoC. App-wide state uses DI containers.
+**Rule of thumb:** Keep state as close to where it's used as possible. Only "lift" it when multiple screens need it.
 
 </div>
 
 <!--
-State management is often the #1 source of bugs in mobile apps. Choosing the
-right tool for each level of state is critical. Our CadetBank Flutter project
-used BLoC + Freezed for predictable, immutable state management.
+Think of state like sticky notes. Some go on your desk (local), some go on
+the team whiteboard (shared), some go in the company handbook (global).
 -->
 
 ---
 
-# Networking & API Integration
+# UI/UX: The Feel of Your App
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="mt-2 text-center text-sm opacity-70">Users don't care about your code — they care how it feels</div>
 
-<div>
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-### Common Patterns
+<div v-click class="icon-card">
 
-<div v-click>
+### Follow the Platform
 
-- **REST APIs** – standard CRUD operations
-- **GraphQL** – flexible client-driven queries
-- **gRPC** – high-performance binary protocol
-- **WebSockets** – real-time bidirectional
-
-</div>
-
-<div v-click class="mt-4">
-
-### Best Practices
-
-- Define clear API contracts (OpenAPI/Swagger)
-- Use code generation for models
-- Implement retry logic & exponential backoff
-- Cache responses appropriately
-- Handle offline scenarios
+- iOS users expect iOS patterns
+- Android users expect Material Design
+- Don't reinvent the navigation wheel
+- Support dark mode (like this deck!)
 
 </div>
 
-</div>
+<div v-click class="icon-card">
 
-<div v-click>
+### Be Inclusive
 
-### Libraries by Platform
-
-| Platform | HTTP Client | Serialization |
-|---|---|---|
-| **iOS** | URLSession, Alamofire | Codable |
-| **Android** | Retrofit, Ktor | Moshi, Kotlinx |
-| **Flutter** | Dio, http | json_serializable |
-
-<div class="accent-box mt-4 text-sm">
-
-**From our training:** Our Android CadetTraining used <strong>Retrofit</strong> for API calls. The Flutter CadetBank used <strong>Dio</strong> with Retrofit-style code generation. We also built OpenAPI specs for contract-first development.
+- Screen readers (VoiceOver / TalkBack)
+- Big enough tap targets (44pt / 48dp)
+- Good color contrast
+- Works offline with graceful fallbacks
 
 </div>
 
 </div>
+
+<div v-click class="accent-box mt-4 text-center text-sm">
+
+**The invisible design rule:** Great UX is when users *don't notice* the design — it just works.
 
 </div>
 
 <!--
-Networking is the bridge between your app and the backend. The OpenAPI project
-in our training showed how to define contracts first — both mobile and backend
-teams can work in parallel with a shared spec.
+Like a well-designed door handle — you don't think about it, you just grab and pull.
+Bad design makes you push when you should pull.
 -->
 
 ---
 
-# Testing Strategies
+# Talking to the Server
 
-<div class="mt-2">
+<div class="mt-2 text-center text-sm opacity-70">Your app is the waiter, the API is the kitchen</div>
 
-### The Testing Pyramid for Mobile
+<div class="diagram-container mt-4">
 
-</div>
+```mermaid {scale: 0.65}
+graph LR
+    A["📱 Your App"] -->|"HTTP Request<br/>'Give me user data'"| B["☁️ API Server"]
+    B -->|"JSON Response<br/>'{name: John}'"| A
+    B --> C["🗄️ Database"]
 
-<div class="diagram-container mt-2">
-
-```mermaid {scale: 0.6}
-graph TB
-    A["E2E / UI Tests<br/>(Slow, Expensive, Few)"] --> B["Integration Tests<br/>(Medium Speed, Some)"]
-    B --> C["Unit Tests<br/>(Fast, Cheap, Many)"]
-
-    style A fill:#6C5CE7,color:#fff
+    style A fill:#A29BFE,color:#fff
     style B fill:#00D2D3,color:#000
     style C fill:#1B1464,color:#fff
 ```
 
 </div>
 
-<div class="grid grid-cols-3 gap-4 mt-4">
+<div class="grid grid-cols-3 gap-4 mt-6 text-sm">
 
-<div v-click class="text-sm">
+<div v-click class="icon-card text-center">
 
-### Unit Tests
+**REST APIs**
 
-- Test ViewModels, BLoCs, Use Cases
-- Mock dependencies
-- Fast feedback loop
-- **Tools:** XCTest, JUnit, flutter_test
+Most common, like ordering from a set menu
 
 </div>
 
-<div v-click class="text-sm">
+<div v-click class="icon-card text-center">
 
-### Integration Tests
+**GraphQL**
 
-- Test feature workflows
-- Real or fake services
-- Database + network layer
-- **Tools:** XCTest, Espresso, integration_test
+Ask for exactly what you want — custom order
 
 </div>
 
-<div v-click class="text-sm">
+<div v-click class="icon-card text-center">
 
-### E2E / UI Tests
+**WebSockets**
 
-- Full user journeys
-- Run on device/simulator
-- Screenshot testing
-- **Tools:** XCUITest, Maestro, Appium
+Live updates — like a sports scoreboard
 
 </div>
 
 </div>
 
 <!--
-From our iosdemo training, we practiced testing ViewModels with mocked
-dependencies. The pytest-demo and jest-demo projects showed testing
-fundamentals that apply across platforms — mocking, fixtures, assertions.
+REST is like a vending machine — fixed options, press a button, get a result.
+GraphQL is like a buffet — take exactly what you want.
+WebSockets are like a TV — data streams to you continuously.
 -->
 
 ---
 
-# Security Best Practices
+# Testing: Trust But Verify
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="mt-2 text-center text-sm opacity-70">Testing is like proofreading — you catch mistakes before your audience does</div>
 
-<div>
+<div class="diagram-container mt-4">
 
-<div v-click>
+```mermaid {scale: 0.7}
+graph TB
+    A["🏔️ E2E Tests<br/>Few, slow, expensive<br/>'Does the whole trip work?'"] --> B["🧪 Integration Tests<br/>Some, medium speed<br/>'Do these pieces work together?'"]
+    B --> C["⚡ Unit Tests<br/>Many, fast, cheap<br/>'Does this one function work?'"]
 
-### Data Protection
-
-- Encrypt sensitive data at rest (Keychain / EncryptedSharedPreferences)
-- Use HTTPS/TLS for all network calls
-- Certificate pinning for critical endpoints
-- Never store secrets in code or git
-
-</div>
-
-<div v-click class="mt-4">
-
-### Authentication
-
-- OAuth 2.0 / OpenID Connect
-- Biometric authentication (Face ID, fingerprint)
-- Secure token storage & refresh flows
-- Session timeout policies
+    style A fill:#A29BFE,color:#fff
+    style B fill:#00D2D3,color:#000
+    style C fill:#1B1464,color:#fff
+```
 
 </div>
 
-</div>
+<div v-click class="highlight-box mt-4 text-center text-sm">
 
-<div>
-
-<div v-click>
-
-### Code Security
-
-- Enable code obfuscation (ProGuard / R8)
-- Detect jailbreak/root for sensitive apps
-- Validate all user input
-- Keep dependencies updated (supply chain)
+**Focus your effort on unit tests** — they're fast, cheap, and catch most bugs. Save E2E tests for critical user journeys.
 
 </div>
 
-<div v-click>
+<!--
+Like editing a book: spell-check every word (unit), review each chapter (integration),
+then read the whole book cover-to-cover once (E2E).
+-->
 
-### Compliance
+---
 
-- **GDPR** – EU data protection
-- **CCPA** – California privacy
-- **HIPAA** – healthcare apps
-- **PCI DSS** – payment processing
-- App Store privacy nutrition labels
+# Security: Lock the Doors
+
+<div class="mt-2 text-center text-sm opacity-70">Your app is a house — security is the locks, alarms, and safes</div>
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div v-click class="icon-card">
+
+### The Essentials
+
+- **HTTPS everywhere** — lock the mail truck
+- **Encrypt stored data** — lock the safe
+- **Secure auth** (OAuth, biometrics) — lock the front door
+- **No secrets in code** — don't hide the key under the mat
 
 </div>
+
+<div v-click class="icon-card">
+
+### The Regulations
+
+- **GDPR** — EU says "ask before collecting"
+- **CCPA** — California says "let users delete"
+- **App Store rules** — privacy nutrition labels
+- **Keep deps updated** — patch the holes
 
 </div>
 
 </div>
 
 <!--
-Security is non-negotiable in production apps. Many of these practices are
-required for enterprise app store approvals. The CadetBank login flow is a
-good starting point for understanding auth flows.
+Security isn't a feature you add at the end. It's the foundation.
+Like building codes for a house — you don't add fire exits after the building is done.
 -->
 
 ---
 layout: section
 ---
 
-# Part 3: Industry Practices
+# Shipping It Safely
 
-How Teams Ship Mobile Apps at Scale
+Getting your app from your laptop to millions of phones
 
 <!--
-Let's move from "what" to "how" — the practices that make mobile development
-sustainable in professional teams.
+You've built it. Now how do you get it out there without breaking things?
 -->
 
 ---
 
-# CI/CD for Mobile Apps
+# The Deployment Pipeline
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="mt-2 text-center text-sm opacity-70">Think of it like a factory assembly line — each station checks quality</div>
+
+<div class="grid grid-cols-2 gap-6 mt-4">
 
 <div>
 
-### Pipeline Stages
+### The Assembly Line
 
 <div class="text-sm mt-2">
 
 ```
-Code Push  →  Lint & Format
-                  ↓
-             Unit Tests
-                  ↓
-               Build
-                  ↓
-          Integration Tests
-                  ↓
-           Sign & Archive
-                  ↓
-        Deploy to TestFlight
-         / Internal Track
+  👨‍💻 Push Code
+      ↓
+  🔍 Lint & Unit Tests
+      ↓
+  🔨 Build the App
+      ↓
+  📝 Sign with Certificate
+      ↓
+  🧪 Beta Testers Get It
+      ↓
+  🚀 Roll Out 1% → 10% → 100%
 ```
 
 </div>
@@ -1002,130 +622,21 @@ Code Push  →  Lint & Format
 
 <div>
 
-<div v-click>
+### Tools of the Trade
 
-### CI/CD Tools
+<div class="icon-card mt-2 text-sm">
 
-- **Fastlane** – automate build, test, deploy
-- **GitHub Actions** / **GitLab CI** – pipeline orchestration
-- **Bitrise / Codemagic** – mobile-specialized CI
-- **Firebase App Distribution** – beta testing
-- **TestFlight** – iOS beta distribution
-
-</div>
-
-<div v-click class="accent-box mt-4 text-sm">
-
-**From our training:** The GitLab CI/CD Pipelines presentation covered reusable templates, stages, and hands-on workshop for building pipelines — these same concepts apply to mobile CI/CD.
+- **Fastlane** — automate build, test, deploy
+- **GitHub Actions / GitLab CI** — pipeline orchestration
+- **TestFlight** — iOS beta distribution
+- **Firebase App Distribution** — Android beta
+- **Bitrise / Codemagic** — mobile-specialized CI
 
 </div>
-
-</div>
-
-</div>
-
-<!--
-CI/CD is essential for mobile teams. Our GitLab CI/CD training covered pipeline
-fundamentals that directly apply — stages, jobs, artifacts, and deployment.
-Fastlane is the de facto standard for mobile build automation.
--->
-
----
-
-# App Store & Deployment
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div v-click>
-
-### The Release Process
-
-<div class="timeline-item">
-  <strong>Version & Build Numbers</strong><br/>
-  <span class="text-sm opacity-80">Semantic versioning, incremental builds</span>
-</div>
-<div class="timeline-item">
-  <strong>Code Signing & Provisioning</strong><br/>
-  <span class="text-sm opacity-80">Certificates, profiles, keystore management</span>
-</div>
-<div class="timeline-item">
-  <strong>App Store Review</strong><br/>
-  <span class="text-sm opacity-80">Guidelines compliance, metadata, screenshots</span>
-</div>
-<div class="timeline-item">
-  <strong>Phased Rollout</strong><br/>
-  <span class="text-sm opacity-80">Progressive delivery: 1% → 10% → 50% → 100%</span>
-</div>
-<div class="timeline-item">
-  <strong>Post-Release Monitoring</strong><br/>
-  <span class="text-sm opacity-80">Crash rates, user feedback, analytics</span>
-</div>
-
-</div>
-
-<div v-click>
-
-### Things That Can Go Wrong
-
-- Rejected by App Store review
-- Signing certificate expired
-- Missing privacy declarations
-- Crash spike on specific device/OS
-- Critical bug found post-release
-
-### Mitigation
-
-- Automated pre-submission checks
-- Certificate rotation reminders
-- Feature flags for kill switches
-- Staged rollouts with monitoring
-- Over-the-air (OTA) update support
-
-</div>
-
-</div>
-
-<!--
-Deployment is where many teams struggle. Code signing alone has caused countless
-hours of debugging. Phased rollouts are similar to the progressive delivery
-concepts we covered in our Istio/Flagger training.
--->
-
----
-
-# Monitoring & Performance
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div v-click>
-
-### Key Metrics to Track
-
-- **Crash-free rate** – target 99.9%+
-- **App launch time** – cold start < 2s
-- **Frame rate** – consistent 60fps
-- **Memory usage** – avoid OOM kills
-- **Network latency** – API response times
-- **Battery impact** – background processing
-- **App size** – download & install size
-
-</div>
-
-<div v-click>
-
-### Monitoring Tools
-
-| Category | Tools |
-|---|---|
-| **Crash Reporting** | Firebase Crashlytics, Sentry |
-| **Analytics** | Firebase Analytics, Mixpanel |
-| **Performance** | Firebase Performance, Datadog |
-| **A/B Testing** | Firebase Remote Config, LaunchDarkly |
-| **User Feedback** | App Store reviews, in-app surveys |
 
 <div class="accent-box mt-4 text-sm">
 
-The **SRE mindset** applies to mobile too — define SLOs for crash rate, latency, and user experience metrics.
+Every code push triggers the full line automatically — no manual steps.
 
 </div>
 
@@ -1134,79 +645,129 @@ The **SRE mindset** applies to mobile too — define SLOs for crash rate, latenc
 </div>
 
 <!--
-Monitoring doesn't stop at backend. Mobile apps need the same observability.
-The SRE training concepts — SLOs, error budgets, monitoring — all translate
-to mobile app health tracking.
+You never hand-deliver an app. The pipeline is your conveyor belt.
+Push code, everything else is automated. Our GitLab CI/CD training
+covered these same pipeline concepts.
+-->
+
+---
+
+# After Launch: Keep Watching
+
+<div class="mt-2 text-center text-sm opacity-70">Launching is the beginning, not the end</div>
+
+<div class="grid grid-cols-3 gap-4 mt-8 text-center">
+
+<div v-click class="icon-card">
+
+<div class="text-4xl mb-2">💥</div>
+
+### Crashes
+
+Target **99.9%** crash-free
+
+*Firebase Crashlytics, Sentry*
+
+</div>
+
+<div v-click class="icon-card">
+
+<div class="text-4xl mb-2">⏱️</div>
+
+### Speed
+
+Cold start **< 2 seconds**
+
+*Firebase Performance, Datadog*
+
+</div>
+
+<div v-click class="icon-card">
+
+<div class="text-4xl mb-2">📊</div>
+
+### Usage
+
+What features do people use?
+
+*Firebase Analytics, Mixpanel*
+
+</div>
+
+</div>
+
+<div v-click class="highlight-box mt-6 text-center text-sm">
+
+**The SRE mindset works for mobile too** — set targets (SLOs) for crash rate, speed, and user satisfaction.
+
+</div>
+
+<!--
+Like a restaurant after opening night — you watch the reviews, check the
+kitchen tickets, and adjust the menu based on what people actually order.
 -->
 
 ---
 layout: section
 ---
 
-# Part 4: Hands-On Cookbook
+# Hands-On Cookbook
 
-Let's Build Something Together!
+Let's build a Flutter app together in 5 steps
 
 <!--
-Time for the fun part! We'll walk through building a simple Flutter app
-together to put these concepts into practice.
+Time for the fun part! We'll walk through a simple app that demonstrates
+the BLoC pattern we talked about.
 -->
 
 ---
 
-# Cookbook: Flutter Counter App with BLoC
+# What We're Building
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="mt-2 text-center text-sm opacity-70">A counter app — simple, but it teaches the pattern used in real production apps</div>
 
-<div>
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-### What We'll Build
+<div class="icon-card text-center">
 
-A simple counter app demonstrating:
-- **BLoC pattern** for state management
-- **Events** and **States** separation
-- **Clean architecture** structure
-- Testing fundamentals
+<div class="text-6xl mt-4 mb-4">🔢</div>
 
-### Prerequisites
+### BLoC Counter App
 
-```bash
-# Install Flutter
-# https://docs.flutter.dev/get-started/install
-
-# Verify installation
-flutter doctor
-
-# Create project
-flutter create bloc_counter_app
-cd bloc_counter_app
-```
+- Press **+** to increment
+- Press **-** to decrement
+- Press **reset** to go back to 0
+- Fully tested with unit tests
 
 </div>
 
 <div>
 
-### Project Structure
+### The BLoC Pattern in One Picture
 
-```
-bloc_counter_app/
-├── lib/
-│   ├── main.dart
-│   ├── bloc/
-│   │   ├── counter_bloc.dart
-│   │   ├── counter_event.dart
-│   │   └── counter_state.dart
-│   └── screens/
-│       └── counter_screen.dart
-├── test/
-│   └── bloc/
-│       └── counter_bloc_test.dart
-└── pubspec.yaml
+<div class="diagram-container mt-2">
+
+```mermaid {scale: 0.65}
+graph LR
+    A["👆 User taps +"] -->|"Event"| B["🧠 BLoC"]
+    B -->|"New State"| C["📱 UI updates"]
+
+    style A fill:#A29BFE,color:#fff
+    style B fill:#00D2D3,color:#000
+    style C fill:#1B1464,color:#fff
 ```
 
-<div class="highlight-box mt-4 text-sm">
+</div>
 
-This structure mirrors our <strong>CadetBank</strong> project's approach — a clear separation of BLoC, screens, and core modules.
+<div class="mt-4 text-sm">
+
+**Events** = what happened (user tapped +)
+
+**BLoC** = decides what to do (add 1)
+
+**State** = what to show (count = 5)
+
+*Like a vending machine: insert coin (event) → machine processes → out comes drink (state)*
 
 </div>
 
@@ -1215,45 +776,43 @@ This structure mirrors our <strong>CadetBank</strong> project's approach — a c
 </div>
 
 <!--
-This is a simplified version of what we built in the CadetBank training.
-We'll walk through each file step by step.
+This is the same pattern our CadetBank Flutter training used — just stripped
+down to the essentials so you can see the pattern clearly.
 -->
 
 ---
 
-# Cookbook Step 1: Define Events & States
+# Step 1: Events & States
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="grid grid-cols-2 gap-4 mt-2">
 
 <div>
 
-### Events (What Happened)
+### Events = User Actions
 
 ```dart
-// lib/bloc/counter_event.dart
-
+// What can the user do?
 abstract class CounterEvent {}
 
 class IncrementPressed extends CounterEvent {}
-
 class DecrementPressed extends CounterEvent {}
-
 class ResetPressed extends CounterEvent {}
 ```
 
-<div class="text-sm mt-2 opacity-80">
-Events are <strong>inputs</strong> — user actions or system triggers that tell the BLoC what happened.
+<div class="accent-box mt-2 text-sm">
+
+Like buttons on a remote control — each one triggers something different.
+
 </div>
 
 </div>
 
 <div>
 
-### States (What to Show)
+### States = Screen Data
 
 ```dart
-// lib/bloc/counter_state.dart
-
+// What does the screen need to show?
 class CounterState {
   final int count;
   final DateTime lastUpdated;
@@ -1272,39 +831,40 @@ class CounterState {
 }
 ```
 
-<div class="text-sm mt-2 opacity-80">
-States are <strong>outputs</strong> — immutable snapshots of the data the UI needs to render.
-</div>
-
 </div>
 
 </div>
 
 <!--
-This is the foundation of BLoC: Events go IN, States come OUT. The copyWith
-pattern creates new immutable state objects — similar to Freezed in CadetBank.
+Events are inputs (what happened), States are outputs (what to show).
+copyWith creates a new state — we never mutate, we always replace.
 -->
 
 ---
 
-# Cookbook Step 2: Build the BLoC
+# Step 2: The BLoC (The Brain)
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+
+<div>
 
 ```dart
-// lib/bloc/counter_bloc.dart
+class CounterBloc
+    extends Bloc<CounterEvent, CounterState> {
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'counter_event.dart';
-import 'counter_state.dart';
+  CounterBloc()
+    : super(CounterState(
+        lastUpdated: DateTime.now())) {
 
-class CounterBloc extends Bloc<CounterEvent, CounterState> {
-  CounterBloc() : super(CounterState(lastUpdated: DateTime.now())) {
     on<IncrementPressed>((event, emit) {
-      emit(state.copyWith(count: state.count + 1));
+      emit(state.copyWith(
+        count: state.count + 1));
     });
 
     on<DecrementPressed>((event, emit) {
       if (state.count > 0) {
-        emit(state.copyWith(count: state.count - 1));
+        emit(state.copyWith(
+          count: state.count - 1));
       }
     });
 
@@ -1315,27 +875,51 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 }
 ```
 
+</div>
+
+<div>
+
+### What's happening here?
+
+<div class="icon-card mt-2 text-sm">
+
+**Event comes in** → BLoC decides → **New state goes out**
+
+</div>
+
+<div class="mt-4 text-sm">
+
+- `on<IncrementPressed>` — add 1
+- `on<DecrementPressed>` — subtract 1 (but not below 0)
+- `on<ResetPressed>` — back to 0
+- `emit()` sends the new state to the UI
+
+</div>
+
 <div class="highlight-box mt-4 text-sm">
 
-**Pattern:** Each event handler is a pure function — given the current state and an event, it produces a new state. This makes logic <strong>predictable and testable</strong>.
+This is **pure logic** — no UI code at all. That's why it's easy to test!
+
+</div>
+
+</div>
 
 </div>
 
 <!--
-The BLoC itself is just a mapping from events to states. No UI code, no
-framework dependencies beyond flutter_bloc. This is what makes it so testable.
+The BLoC is like a calculator — you give it input, it gives you output.
+It doesn't know or care about buttons and screens.
 -->
 
 ---
 
-# Cookbook Step 3: Create the UI
+# Step 3: The UI (The Face)
 
-<div class="grid grid-cols-2 gap-4 mt-1">
+<div class="grid grid-cols-2 gap-4 mt-2">
 
 <div>
 
 ```dart
-// lib/screens/counter_screen.dart
 class CounterScreen extends StatelessWidget {
   const CounterScreen({super.key});
 
@@ -1345,20 +929,15 @@ class CounterScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('BLoC Counter'),
         actions: [
-          IconButton(icon: const Icon(Icons.refresh),
+          IconButton(
+            icon: const Icon(Icons.refresh),
             onPressed: () => context
               .read<CounterBloc>()
               .add(ResetPressed())),
         ]),
-```
-
-</div>
-
-<div>
-
-```dart
       body: Center(
-        child: BlocBuilder<CounterBloc, CounterState>(
+        child: BlocBuilder<CounterBloc,
+            CounterState>(
           builder: (context, state) {
             return Text('${state.count}',
               style: Theme.of(context)
@@ -1366,65 +945,6 @@ class CounterScreen extends StatelessWidget {
           },
         ),
       ),
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          FloatingActionButton(heroTag: 'inc',
-            child: const Icon(Icons.add),
-            onPressed: () => context
-              .read<CounterBloc>()
-              .add(IncrementPressed())),
-          const SizedBox(height: 8),
-          FloatingActionButton(heroTag: 'dec',
-            child: const Icon(Icons.remove),
-            onPressed: () => context
-              .read<CounterBloc>()
-              .add(DecrementPressed())),
-      ]));}}
-```
-
-</div>
-
-</div>
-
-<div class="highlight-box mt-2 text-sm">
-
-The UI has **zero business logic** — it reads state via `BlocBuilder` and dispatches events via `context.read<CounterBloc>().add(...)`.
-
-</div>
-
-<!--
-The UI just reads state and dispatches events. It has zero business logic.
-BlocBuilder rebuilds only when state changes. Clean separation!
--->
-
----
-
-# Cookbook Step 4: Wire It Up & Test
-
-<div class="grid grid-cols-2 gap-4 mt-1">
-
-<div>
-
-### main.dart
-
-```dart
-// lib/main.dart
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'BLoC Counter',
-      theme: ThemeData(
-        colorSchemeSeed: Colors.deepPurple,
-        useMaterial3: true),
-      home: BlocProvider(
-        create: (_) => CounterBloc(),
-        child: const CounterScreen()),
     );
   }
 }
@@ -1434,14 +954,83 @@ class MyApp extends StatelessWidget {
 
 <div>
 
-### Unit Test
+### What's happening here?
+
+<div class="icon-card mt-2 text-sm">
+
+**UI reads state** and **sends events**. That's it. Zero logic.
+
+</div>
+
+<div class="mt-4 text-sm">
+
+- `BlocBuilder` listens for state changes
+- When state changes → UI rebuilds
+- Button press → sends event to BLoC
+- The screen is "dumb" on purpose
+
+</div>
+
+<div class="accent-box mt-4 text-sm">
+
+Like a TV screen — it just displays whatever signal it receives. It doesn't decide what's on.
+
+</div>
+
+</div>
+
+</div>
+
+<!--
+The UI is intentionally simple. All the smarts are in the BLoC.
+This separation is what makes the app maintainable and testable.
+-->
+
+---
+
+# Step 4: Wire Up & Test
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+
+<div>
+
+### main.dart — Connect Everything
 
 ```dart
-// test/bloc/counter_bloc_test.dart
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BlocProvider(
+        create: (_) => CounterBloc(),
+        child: const CounterScreen(),
+      ),
+    );
+  }
+}
+```
+
+<div class="accent-box mt-2 text-sm">
+
+`BlocProvider` = the plug that connects the BLoC brain to the UI face.
+
+</div>
+
+</div>
+
+<div>
+
+### Test — No UI Needed!
+
+```dart
 void main() {
   group('CounterBloc', () {
     blocTest<CounterBloc, CounterState>(
-      'emits [1] when IncrementPressed',
+      'increments correctly',
       build: () => CounterBloc(),
       act: (b) => b.add(IncrementPressed()),
       verify: (b) =>
@@ -1449,7 +1038,7 @@ void main() {
     );
 
     blocTest<CounterBloc, CounterState>(
-      'stays 0 when DecrementPressed at 0',
+      'won\'t go below zero',
       build: () => CounterBloc(),
       act: (b) => b.add(DecrementPressed()),
       verify: (b) =>
@@ -1463,71 +1052,62 @@ void main() {
 
 </div>
 
-<div class="highlight-box mt-2 text-sm">
-
-`BlocProvider` injects the BLoC into the widget tree. Tests use `bloc_test` — **no UI dependencies needed**.
-
-</div>
-
 <!--
-BlocProvider injects the BLoC into the widget tree. The test uses bloc_test
-package — notice how we test the BLoC without any UI dependencies at all.
-This is the power of clean architecture.
+Notice: the test never creates a screen or taps a button.
+It talks directly to the BLoC. That's the power of separation.
 -->
 
 ---
 
-# Cookbook: Dependencies & Run
+# Step 5: Run It!
 
-<div class="grid grid-cols-2 gap-4 mt-2">
+<div class="grid grid-cols-2 gap-4 mt-4">
 
 <div>
 
-### pubspec.yaml
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_bloc: ^8.1.6
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  bloc_test: ^9.1.7
-```
-
-### Run It
+### Setup
 
 ```bash
-flutter pub get    # Install deps
-flutter run        # Launch the app
-flutter test       # Run tests
+flutter create bloc_counter_app
+cd bloc_counter_app
+flutter pub add flutter_bloc
+flutter pub add --dev bloc_test
+```
+
+### Run
+
+```bash
+flutter run       # Launch the app
+flutter test      # Run the tests
 ```
 
 </div>
 
 <div>
 
-### Challenge for the Audience
-
-Try extending this app:
+### Your Turn — Try These Challenges
 
 <div class="icon-card mt-2 text-sm">
 
-**1. Multiply button** — add a `MultiplyPressed` event that doubles the count
+**Challenge 1:** Add a **multiply** button that doubles the count
 
 </div>
 
 <div class="icon-card mt-2 text-sm">
 
-**2. History list** — track each operation in the state and display it
+**Challenge 2:** Show a **history** of all operations
 
 </div>
 
 <div class="icon-card mt-2 text-sm">
 
-**3. Persistence** — save count to `SharedPreferences` and restore on app start
+**Challenge 3:** **Save** the count so it survives app restart
+
+</div>
+
+<div class="highlight-box mt-4 text-sm">
+
+Full cookbook files are in the `cookbook/` folder of this project!
 
 </div>
 
@@ -1536,251 +1116,171 @@ Try extending this app:
 </div>
 
 <!--
-These challenges mirror real-world patterns. Persistence especially is something
-every production app needs. The CadetBank project handles similar patterns
-with its login state and user data.
+The cookbook directory has complete, copy-paste-ready files for each step.
+The challenges mirror real production patterns.
 -->
 
 ---
 layout: section
 ---
 
-# Career Insights
+# Your Career in Mobile
 
-Building Your Path in Mobile Development
+Where to start, where to grow
 
 <!--
-Let's talk about what this means for your career and how to position
-yourself in the mobile development space.
+Let's wrap up with some career guidance for anyone interested
+in pursuing mobile development.
 -->
 
 ---
 
-# Mobile Developer Roadmap
+# The Learning Path
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="mt-2 text-center text-sm opacity-70">You don't need to learn everything — pick a lane first, then expand</div>
 
-<div>
+<div class="diagram-container mt-6">
 
-### Foundation Skills
+```mermaid {scale: 0.6}
+graph LR
+    A["🌱 Pick a language<br/>Swift / Kotlin / Dart"] --> B["📱 Learn the framework<br/>SwiftUI / Compose / Flutter"]
+    B --> C["🏗️ Master architecture<br/>MVVM / BLoC"]
+    C --> D["🧪 Add testing & CI/CD"]
+    D --> E["🚀 Build & ship a real app"]
 
-<div class="timeline-item">
-  <strong>Programming Language</strong><br/>
-  <span class="text-sm opacity-80">Swift, Kotlin, or Dart — pick one and go deep</span>
-</div>
-<div class="timeline-item">
-  <strong>Platform Fundamentals</strong><br/>
-  <span class="text-sm opacity-80">Lifecycle, navigation, storage, networking</span>
-</div>
-<div class="timeline-item">
-  <strong>UI Framework</strong><br/>
-  <span class="text-sm opacity-80">SwiftUI, Jetpack Compose, or Flutter widgets</span>
-</div>
-<div class="timeline-item">
-  <strong>Architecture & Patterns</strong><br/>
-  <span class="text-sm opacity-80">MVVM, clean architecture, dependency injection</span>
-</div>
-<div class="timeline-item">
-  <strong>Testing & CI/CD</strong><br/>
-  <span class="text-sm opacity-80">Unit tests, UI tests, automated pipelines</span>
-</div>
+    style A fill:#A29BFE,color:#fff
+    style C fill:#00D2D3,color:#000
+    style E fill:#1B1464,color:#fff
+```
 
 </div>
 
-<div v-click>
+<div class="grid grid-cols-3 gap-4 mt-6 text-center text-sm">
 
-### Advanced Skills
+<div v-click class="icon-card">
 
-<div class="timeline-item">
-  <strong>Performance Optimization</strong><br/>
-  <span class="text-sm opacity-80">Profiling, memory management, rendering</span>
+**Junior**
+
+Build features, write tests
+
 </div>
-<div class="timeline-item">
-  <strong>Security & Compliance</strong><br/>
-  <span class="text-sm opacity-80">Encryption, auth flows, privacy regulations</span>
+
+<div v-click class="icon-card">
+
+**Senior / Lead**
+
+Architecture, mentoring, reviews
+
 </div>
-<div class="timeline-item">
-  <strong>Platform Integration</strong><br/>
-  <span class="text-sm opacity-80">Widgets, notifications, health APIs, payments</span>
-</div>
-<div class="timeline-item">
-  <strong>AI/ML on Device</strong><br/>
-  <span class="text-sm opacity-80">Core ML, ML Kit, TensorFlow Lite</span>
-</div>
-<div class="timeline-item">
-  <strong>Leadership & Mentoring</strong><br/>
-  <span class="text-sm opacity-80">Code reviews, architecture decisions, team growth</span>
-</div>
+
+<div v-click class="icon-card">
+
+**Architect / Staff**
+
+Platform strategy, cross-team standards
 
 </div>
 
 </div>
 
 <!--
-You don't need to learn everything at once. Pick a platform, build depth,
-then expand. The training materials we've covered touch on many of these
-skills — from Swift basics to CI/CD pipelines.
+Like learning to cook: first learn knife skills, then recipes, then
+develop your own style. You don't start by inventing a new cuisine.
 -->
 
 ---
 
-# Career Paths in Mobile
+# Six Things to Remember
+
+<div class="grid grid-cols-2 gap-4 mt-6">
+
+<div v-click class="icon-card text-sm">
+
+**1. Choose based on needs, not hype** — The best tool is the one that fits your team and timeline.
+
+</div>
+
+<div v-click class="icon-card text-sm">
+
+**2. Architecture saves you later** — 10 minutes of planning saves 10 hours of debugging.
+
+</div>
+
+<div v-click class="icon-card text-sm">
+
+**3. Test the brain, not the face** — Unit test your logic layer. That's where the bugs hide.
+
+</div>
+
+<div v-click class="icon-card text-sm">
+
+**4. Security is day one, not day last** — Encryption, auth, and privacy from the start.
+
+</div>
+
+<div v-click class="icon-card text-sm">
+
+**5. Ship small, watch closely** — Phased rollouts and monitoring beat "big bang" releases.
+
+</div>
+
+<div v-click class="icon-card text-sm">
+
+**6. Keep learning, keep building** — Side projects, conferences, and talks like this one!
+
+</div>
+
+</div>
+
+<!--
+These principles apply whether you're building for iOS, Android, Flutter,
+or whatever comes next. They're timeless.
+-->
+
+---
+
+# Resources
 
 <div class="grid grid-cols-3 gap-4 mt-6">
 
-<div v-click class="icon-card text-center">
+<div class="icon-card text-sm">
 
-### Mobile Developer
+### Learn
 
-<div class="text-3xl mt-2 mb-2">📱</div>
-
-Build features, write tests, ship apps
-
-<div class="text-sm opacity-70 mt-2">Entry → Mid Level</div>
-
-</div>
-
-<div v-click class="icon-card text-center">
-
-### Mobile Tech Lead
-
-<div class="text-3xl mt-2 mb-2">🏗️</div>
-
-Architecture, code reviews, mentoring
-
-<div class="text-sm opacity-70 mt-2">Senior Level</div>
+- [Flutter Docs](https://docs.flutter.dev)
+- [SwiftUI Docs](https://developer.apple.com/documentation/swiftui)
+- [Jetpack Compose](https://developer.android.com/jetpack/compose)
+- Kodeco tutorials
 
 </div>
 
-<div v-click class="icon-card text-center">
+<div class="icon-card text-sm">
 
-### Mobile Architect
+### Watch
 
-<div class="text-3xl mt-2 mb-2">🌐</div>
-
-Cross-team standards, platform strategy
-
-<div class="text-sm opacity-70 mt-2">Staff+ Level</div>
-
-</div>
+- **WWDC** (Apple, June)
+- **Google I/O** (May)
+- **Flutter Forward**
+- YouTube channels & podcasts
 
 </div>
 
-<div v-click class="highlight-box mt-6 text-sm">
+<div class="icon-card text-sm">
 
-### Tips for Growth
+### Connect
 
-- **Build portfolio projects** — open source contributions count
-- **Learn the "other" platform** — iOS dev? Learn some Android, and vice versa
-- **Understand backend** — APIs, databases, cloud services
-- **Stay current** — WWDC, Google I/O, Flutter conferences
-- **Write about what you learn** — blogs, talks, internal tech shares
-
-</div>
-
-<!--
-The mobile space has strong demand and clear growth paths. Cross-platform
-knowledge makes you especially valuable. This seminar itself is an example
-of tech sharing — a great career accelerator.
--->
-
----
-
-# Key Takeaways
-
-<div class="grid grid-cols-2 gap-4 mt-4">
-
-<div v-click class="icon-card">
-
-**1. Choose Wisely, Build Deeply** — Pick your platform based on real requirements, not hype.
-
-</div>
-
-<div v-click class="icon-card">
-
-**2. Architecture is Investment** — Clean architecture pays dividends in testability and team velocity.
-
-</div>
-
-<div v-click class="icon-card">
-
-**3. Test What Matters** — Focus on business logic. Automate CI/CD. Don't ship untested code.
-
-</div>
-
-<div v-click class="icon-card">
-
-**4. Security is Non-Negotiable** — Encrypt data, validate inputs, use secure auth.
-
-</div>
-
-<div v-click class="icon-card">
-
-**5. Ship Incrementally** — Phased rollouts, feature flags, and monitoring. Shipping is just the beginning.
-
-</div>
-
-<div v-click class="icon-card">
-
-**6. Never Stop Learning** — Conferences, courses, side projects, and knowledge sharing keep you sharp.
-
-</div>
-
-</div>
-
-<!--
-These six principles will serve you well regardless of which platform or
-framework you choose. They're the common thread across all our training materials.
--->
-
----
-
-# Resources to Explore
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div>
-
-### Official Documentation
-
-- [Swift / SwiftUI](https://developer.apple.com/documentation/swiftui)
-- [Kotlin / Jetpack Compose](https://developer.android.com/jetpack/compose)
-- [Flutter / Dart](https://docs.flutter.dev)
-- [React Native](https://reactnative.dev)
-
-### Learning Platforms
-
-- Apple Developer Tutorials
-- Android Developer Codelabs
-- Flutter Codelabs
-- Ray Wenderlich / Kodeco
-
-</div>
-
-<div>
-
-### Conferences & Events
-
-- **WWDC** – Apple (June)
-- **Google I/O** – Android (May)
-- **Flutter Forward** – Flutter (varies)
-- **KotlinConf** – Kotlin (May)
-- **App Builders** – Cross-platform (May)
-
-### Communities
-
+- r/FlutterDev, r/iOSProgramming
 - Stack Overflow
-- Reddit: r/iOSProgramming, r/androiddev, r/FlutterDev
 - Discord communities
-- Local meetup groups
+- Local meetups
 
 </div>
 
 </div>
 
 <!--
-All of these are free or low-cost resources. The best way to learn is to
-build something — even a small side project teaches more than just reading.
+All free or low-cost. The best investment is building something —
+even a small app teaches more than watching 100 tutorials.
 -->
 
 ---
@@ -1790,21 +1290,24 @@ class: text-center
 
 # Thank You!
 
-<div class="mt-4 text-xl opacity-80">
+<div class="mt-4 text-xl opacity-60">
 Mobile Application Development — Key Considerations & Industry Practices
 </div>
 
-<div class="mt-8">
+<div class="mt-12 text-lg">
 
-### Let's Discuss!
-
-Questions, ideas, or topics you'd like to explore further?
+Questions? Ideas? Let's discuss!
 
 </div>
 
+<div class="mt-8 opacity-40 text-sm">
+
+Built with Slidev &bull; Detailed version available in `slides-detailed.md`
+
+</div>
 
 <!--
-Thank you for your time and attention! I hope this gave you a solid foundation
-for understanding mobile development. Happy to answer any questions.
-The cookbook materials are available for you to try on your own.
+Thank you! The detailed version of this deck has deeper code samples,
+more bullet points, and additional slides if you want to dive deeper.
+The cookbook folder has full source code to try on your own.
 -->

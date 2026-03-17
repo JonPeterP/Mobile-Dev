@@ -1,5 +1,16 @@
 # Mobile Application Development — Key Considerations & Industry Practices
 
+A [Slidev](https://sli.dev)-powered presentation for a 1-hour seminar on mobile application development, covering emerging technologies, practical patterns, and career insights.
+
+## Two Versions
+
+| File | Style | Slides | Best For |
+|------|-------|--------|----------|
+| `slides.md` (default) | Visual, analogy-driven, less text | ~27 | Live presenting to a general audience |
+| `slides-detailed.md` | Text-heavy, code-rich, comprehensive | ~35 | Technical audience or self-study handout |
+
+To switch versions, rename the file you want to `slides.md` (Slidev's default entry).
+
 ## Tech Stack
 
 - **Slidev** – Markdown-based presentation framework (Vue.js + Vite)
