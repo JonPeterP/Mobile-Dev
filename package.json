@@ -1,0 +1,25 @@
+{
+  "name": "mobile-app-dev-presentation",
+  "version": "1.0.0",
+  "description": "Slidev presentation on Mobile Application Development – Key Considerations and Industry Practices",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.8.2",
+    "@slidev/theme-default": "latest",
+    "pnpm": "^10.28.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "playwright-chromium"
+    ]
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.58.2"
+  }
+}
