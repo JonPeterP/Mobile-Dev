@@ -2,13 +2,13 @@
 theme: default
 colorSchema: dark
 class: text-center
-title: "Mobile Application Development – Key Considerations & Industry Practices"
+title: "Building Apps People Love"
 drawings:
   persist: false
 transition: slide-left
 ---
 
-# Mobile Application Development
+# Building Apps People Love
 
 Key Considerations & Industry Practices
 
