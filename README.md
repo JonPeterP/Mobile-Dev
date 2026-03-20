@@ -2,10 +2,10 @@
 
 ## Two Versions
 
-| File | Style | Slides | Best For |
-|------|-------|--------|----------|
-| `slides.md` (default) | Visual, analogy-driven, less text | ~27 | Live presenting to a general audience |
-| `slides-detailed.md` | Text-heavy, code-rich, comprehensive | ~35 | Technical audience or self-study handout |
+| File | Style | Version |
+|------|-------|----------|
+| `slides.md` (default) | Analogies | General audience |
+| `slides-detailed.md` | Comprehensive | Technical self-study handout |
 
 To switch versions, rename the file you want to `slides.md` (Slidev's default entry).
 
