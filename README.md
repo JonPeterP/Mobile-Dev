@@ -1,7 +1,5 @@
 # Mobile Application Development — Key Considerations & Industry Practices
 
-A [Slidev](https://sli.dev)-powered presentation for a 1-hour seminar on mobile application development, covering emerging technologies, practical patterns, and career insights.
-
 ## Two Versions
 
 | File | Style | Slides | Best For |
@@ -80,77 +78,6 @@ Mobile-Dev-talk/
 └── README.md             # This file
 ```
 
-## Presentation Flow (~60 minutes)
-
-### Part 1: The Mobile Landscape (10 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 1 | Title & Introduction | 1 min | Welcome, set the tone |
-| 2 | Agenda | 2 min | Overview of the session |
-| 3 | Learning Goals | 1 min | Emerging tech, practical apps, careers |
-| 4 | Mobile Landscape 2026 | 3 min | Market stats, trends (AI/ML, AR, 5G) |
-| 5 | Two Dominant Ecosystems | 3 min | iOS vs Android overview |
-
-### Part 2: Native & Cross-Platform Deep Dive (12 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 6 | Native iOS Development | 4 min | Swift, SwiftUI, code example from iosdemo training |
-| 7 | Native Android Development | 4 min | Kotlin, Compose, code example from Android CadetTraining |
-| 8 | Cross-Platform with Flutter | 3 min | Dart, BLoC, code from CadetBank training |
-| 9 | Decision Matrix | 2 min | When to use native vs cross-platform |
-| 10 | Other Cross-Platform Options | 2 min | React Native, KMP, MAUI |
-
-### Part 3: Key Considerations (18 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 11 | Section Divider | — | Transition slide |
-| 12 | Architecture Patterns | 3 min | Why architecture matters + clean arch diagram |
-| 13 | MVVM / MVP / BLoC | 4 min | Side-by-side comparison with training examples |
-| 14 | UI/UX Considerations | 3 min | Platform guidelines, accessibility, performance UX |
-| 15 | State Management | 3 min | iOS, Android, Flutter state tools |
-| 16 | Networking & APIs | 3 min | REST, GraphQL, libraries per platform |
-| 17 | Testing Strategies | 3 min | Testing pyramid, tools by platform |
-| 18 | Security Best Practices | 3 min | Data protection, auth, compliance |
-
-### Part 4: Industry Practices (8 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 19 | Section Divider | — | Transition slide |
-| 20 | CI/CD for Mobile | 3 min | Pipeline diagram, Fastlane, GitLab CI reference |
-| 21 | App Store & Deployment | 3 min | Release process timeline, phased rollouts |
-| 22 | Monitoring & Performance | 2 min | Key metrics, monitoring tools, SRE mindset |
-
-### Part 5: Hands-On Cookbook (10 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 23 | Section Divider | — | Transition slide |
-| 24 | Cookbook Overview | 2 min | What we'll build, prerequisites, project structure |
-| 25 | Step 1: Events & States | 2 min | Walk through event and state definitions |
-| 26 | Step 2: Build the BLoC | 2 min | Event-to-state mapping logic |
-| 27 | Step 3: Create the UI | 2 min | BlocBuilder, dispatching events |
-| 28 | Step 4: Wire Up & Test | 2 min | BlocProvider, bloc_test, audience challenge |
-| 29 | Dependencies (pubspec) | — | Quick reference slide |
-
-> **Tip:** If the audience has laptops, invite them to follow along using the files in `cookbook/`. Otherwise, walk through the code on screen and save the cookbook for post-seminar self-study.
-
-### Part 6: Career Insights & Closing (7 min)
-
-| Slide | Topic | Duration | Notes |
-|-------|-------|----------|-------|
-| 30 | Section Divider | — | Transition slide |
-| 31 | Developer Roadmap | 2 min | Foundation → Advanced skills timeline |
-| 32 | Career Paths | 2 min | Developer → Tech Lead → Architect |
-| 33 | Key Takeaways | 2 min | 6 principles to remember |
-| 34 | Resources | 1 min | Links, conferences, communities |
-| 35 | Thank You & Q&A | 5 min | Open discussion |
-
-**Total: ~60 minutes** (including ~5 min Q&A buffer)
-
 ## Cookbook (Hands-On Activity)
 
 The `cookbook/` directory contains a complete Flutter + BLoC exercise:
@@ -182,29 +109,6 @@ Edit `styles/base.css`:
   --slidev-theme-accent: #00D2D3;    /* Teal - highlights */
 }
 ```
-
-### Adding Slides
-
-Add new slides to `slides.md` separated by `---`. Use Slidev features:
-
-- `v-click` for step-by-step reveals
-- Mermaid code blocks for diagrams
-- Tailwind classes for layout (`grid`, `flex`, `gap-*`)
-- Speaker notes in `<!-- comments -->`
-
-## References
-
-This presentation draws from real training projects:
-
-| Project | Platform | Concepts Used |
-|---------|----------|---------------|
-| iosdemo (Tidy/Unkempt) | iOS | MVVM, Combine, SwiftUI, Testing |
-| android-cadet-training | Android | MVP, Activities, Fragments, Retrofit |
-| cadetbank | Flutter | BLoC, GetIt DI, Freezed, Navigation |
-| swift-basics | iOS | Swift fundamentals |
-| KotlinBasics | Kotlin | Kotlin language features |
-| gitlab-cicd-pipelines | DevOps | CI/CD pipeline concepts |
-| OpenAPI spec | API Design | Contract-first development |
 
 ## License
 
